@@ -1,6 +1,6 @@
 {
   "name": "generator-matrix-toolchain",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,17 @@
   "files": [
     "app"
   ],
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheMaximumPotential/matrix-toolchain.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheMaximumPotential/matrix-toolchain/issues"
+  },
+  "homepage": "https://github.com/TheMaximumPotential/matrix-toolchain#README.md",
+  "keywords": [
+    "generator-matrix-toolchain"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
