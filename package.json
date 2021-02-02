@@ -1,6 +1,6 @@
 {
   "name": "generator-matrix-toolchain",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "为了方便小项目的自动化构建以及自动化部署搭建的脚手架",
   "main": "index.js",
   "scripts": {
