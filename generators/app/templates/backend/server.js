@@ -1,4 +1,4 @@
-const Koa = require('Koa')
+const Koa = require('koa')
 const cors = require('koa-cors')
 const app = new Koa()
 

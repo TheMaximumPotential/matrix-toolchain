@@ -30,7 +30,7 @@ module.exports = class extends (
 			scripts: {
 				start:
 					'concurrently "cd backend && node server.js"  "cd frontend && yarn dev "',
-				build: 'sh build.sh',
+				deploy: 'sh deploy.sh',
 			},
 			author: '',
 			license: 'ISC',
@@ -52,16 +52,16 @@ module.exports = class extends (
 			this.templatePath('.vscode'),
 			this.destinationPath('.vscode')
 		)
+		// await this.fs.copyTpl(
+		// 	this.templatePath('.gitignore'),
+		// 	this.destinationPath('.gitignore')
+		// )
 		await this.fs.copyTpl(
-			this.templatePath('.gitignore'),
-			this.destinationPath('.gitignore')
-		)
-		await this.fs.copyTpl(
-			this.templatePath('backend/.dockerignore'),
+			this.templatePath('.dockerignore'),
 			this.destinationPath('backend/.dockerignore')
 		)
 		await this.fs.copyTpl(
-			this.templatePath('frontend/.dockerignore'),
+			this.templatePath('.dockerignore'),
 			this.destinationPath('frontend/.dockerignore')
 		)
 		// this.copyTemplate(
@@ -119,6 +119,6 @@ module.exports = class extends (
 	}
 
 	end() {
-		this.spawnCommand('sh', [this.templatePath('dev.sh')])
+		this.spawnCommand('sh', [this.templatePath('install.sh')])
 	}
 }
